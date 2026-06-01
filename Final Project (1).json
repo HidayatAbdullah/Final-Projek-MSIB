@@ -1,0 +1,467 @@
+{
+  "name": "Final Project",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1065bEqgkVbp1GDBLVRlwcW5VfbraGLx1KTbtN6kdTpw",
+          "mode": "list",
+          "cachedResultName": "Form Copywriting",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1065bEqgkVbp1GDBLVRlwcW5VfbraGLx1KTbtN6kdTpw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 642058021,
+          "mode": "list",
+          "cachedResultName": "Sheet2",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1065bEqgkVbp1GDBLVRlwcW5VfbraGLx1KTbtN6kdTpw/edit#gid=642058021"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Motivator": "={{ $json.output.motivator }}",
+            "Salesman": "={{ $json.output.sales }}",
+            "Produk": "={{ $('On form submission').item.json['Nama Produk'] }}",
+            "Komedian": "={{ $json.output.komedian }}",
+            "Pakar medis": "={{ $json.output.medis }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Produk",
+              "displayName": "Produk",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Komedian",
+              "displayName": "Komedian",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Pakar medis",
+              "displayName": "Pakar medis",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Motivator",
+              "displayName": "Motivator",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Salesman",
+              "displayName": "Salesman",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        768,
+        64
+      ],
+      "id": "04878c6c-d74d-45ed-9303-3d984cd7b11e",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "yJ2ID1PMpUkMRL23",
+          "name": "Google Sheets account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "formTitle": "Formulir Brief Produk & Copywriting AI",
+        "formDescription": "Harap isi form di bawah ini sesuai dengan ketentuan yang berlaku.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Nama Produk",
+              "fieldName": "Nama Produk",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Target Penjualan",
+              "fieldName": "Target Penjualan",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Upload Deskripsi Produk",
+              "fieldType": "file",
+              "fieldName": "Upload Deskripsi Produk",
+              "acceptFileTypes": ".pdf",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false,
+          "ipWhitelist": "",
+          "buttonLabel": "Submit",
+          "path": "4c7e2e6d-c194-4c65-a37a-0d5077444173",
+          "respondWithOptions": {
+            "values": {}
+          },
+          "customCss": ":root {\n/* Font */\n--font-family: 'Inter', 'Open Sans', sans-serif;\n--font-weight-normal: 400;\n--font-weight-bold: 600;\n\n```\n--font-size-body: 13px;\n--font-size-label: 14px;\n--font-size-test-notice: 12px;\n--font-size-input: 14px;\n--font-size-header: 24px;\n--font-size-paragraph: 14px;\n--font-size-link: 12px;\n--font-size-error: 12px;\n--font-size-html-h1: 30px;\n--font-size-html-h2: 22px;\n--font-size-html-h3: 18px;\n--font-size-html-h4: 15px;\n--font-size-html-h5: 13px;\n--font-size-html-h6: 11px;\n--font-size-subheader: 14px;\n\n/* Background */\n--color-background: #eef3f8;\n\n/* Card */\n--color-card-bg: rgba(255, 255, 255, 0.92);\n--color-card-border: rgba(255, 255, 255, 0.55);\n--color-card-shadow: rgba(15, 23, 42, 0.14);\n\n/* Text */\n--color-header: #1f2937;\n--color-header-subtext: #6b7280;\n--color-label: #374151;\n--color-html-text: #4b5563;\n--color-input-text: #111827;\n--color-link: #6b7280;\n--color-html-link: #2563eb;\n\n/* Input */\n--color-input-border: #d1d5db;\n--color-focus-border: #2563eb;\n\n/* Button */\n--color-submit-btn-bg: #1f2937;\n--color-submit-btn-text: #ffffff;\n\n/* Notice */\n--color-test-notice-text: #92400e;\n--color-test-notice-bg: #fffbeb;\n--color-test-notice-border: #fde68a;\n\n/* Error & Required */\n--color-error: #dc2626;\n--color-required: #dc2626;\n\n/* Clear Button */\n--color-clear-button-bg: #9ca3af;\n\n/* Border Radius */\n--border-radius-card: 18px;\n--border-radius-input: 12px;\n--border-radius-clear-btn: 50%;\n--card-border-radius: 18px;\n\n/* Spacing */\n--padding-container-top: 40px;\n--padding-card: 28px;\n--padding-test-notice-vertical: 12px;\n--padding-test-notice-horizontal: 20px;\n--margin-bottom-card: 18px;\n--padding-form-input: 14px;\n--card-padding: 28px;\n--card-margin-bottom: 18px;\n\n/* Dimensions */\n--container-width: 520px;\n--submit-btn-height: 50px;\n--checkbox-size: 18px;\n\n/* Effects */\n--box-shadow-card: 0px 20px 45px rgba(15, 23, 42, 0.16);\n--opacity-placeholder: 0.55;\n```\n\n}\n\n/* Background utama form */\nbody {\nbackground:\nlinear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.45)),\nurl('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');\nbackground-size: cover;\nbackground-position: center;\nbackground-repeat: no-repeat;\nbackground-attachment: fixed;\nfont-family: var(--font-family);\n}\n\n/* Card form */\nform,\n.card,\n.n8n-form-card {\nbackdrop-filter: blur(16px);\n-webkit-backdrop-filter: blur(16px);\nborder: 1px solid var(--color-card-border);\nbox-shadow: var(--box-shadow-card);\n}\n\n/* Judul form */\nh1,\nh2,\n.form-title {\nletter-spacing: -0.5px;\nline-height: 1.25;\n}\n\n/* Deskripsi form */\np,\n.form-description {\nline-height: 1.7;\n}\n\n/* Label */\nlabel {\nfont-weight: 600;\nmargin-bottom: 6px;\n}\n\n/* Input, textarea, select */\ninput,\ntextarea,\nselect {\ntransition: all 0.2s ease;\nborder-radius: var(--border-radius-input);\nbackground: rgba(255, 255, 255, 0.95);\n}\n\n/* Efek saat input aktif */\ninput:focus,\ntextarea:focus,\nselect:focus {\nborder-color: var(--color-focus-border);\nbox-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);\noutline: none;\n}\n\n/* Placeholder */\ninput::placeholder,\ntextarea::placeholder {\ncolor: #9ca3af;\n}\n\n/* Button submit */\nbutton[type=\"submit\"],\n.submit-button {\nborder-radius: 14px;\nfont-weight: 600;\nletter-spacing: 0.2px;\ntransition: all 0.25s ease;\nbox-shadow: 0 10px 22px rgba(31, 41, 55, 0.22);\n}\n\n/* Hover button */\nbutton[type=\"submit\"]:hover,\n.submit-button:hover {\ntransform: translateY(-2px);\nbackground: #111827;\nbox-shadow: 0 14px 28px rgba(31, 41, 55, 0.28);\n}\n\n/* Mobile friendly */\n@media (max-width: 640px) {\n:root {\n--container-width: 92%;\n--padding-card: 22px;\n--card-padding: 22px;\n--font-size-header: 21px;\n}\n\n```\nbody {\n\tbackground-attachment: scroll;\n}\n```\n\n}\n"
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.5,
+      "position": [
+        -896,
+        48
+      ],
+      "id": "8a7b6caf-8663-46a8-9625-825036603170",
+      "name": "On form submission",
+      "webhookId": "4c7e2e6d-c194-4c65-a37a-0d5077444173"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all(); // Ambil data input \n\nfor (let item of items) {\n  const binaryData = item.binary?.Upload_Deskripsi_Produk;\n\n  if (binaryData) {\n    item.json.produk_base64 = binaryData.data; // Data base64 internal \n    item.json.fileName = binaryData.fileName;\n  }\n\n  // Tambahkan tanggal format Indonesia menggunakan Luxon \n  item.json.tanggal_input = DateTime.now().toFormat('dd-MM-yyyy HH:mm');\n}\n\nreturn items;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -688,
+        48
+      ],
+      "id": "f99b8d39-5f42-44c8-9d68-c600aecedef7",
+      "name": "Mengonversi ke Base64"
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "binaryPropertyName": "Upload_Deskripsi_Produk",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.1,
+      "position": [
+        -480,
+        48
+      ],
+      "id": "033160de-1fdb-42ea-afd5-1c1d6efff84e",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Buat copywriting promosi produk dengan gaya PAKAR MEDIS agar orang tertarik terhadap produk kita.\n\nNama Produk:\n{{ $('On form submission').item.json['Nama Produk'] }}\n\nDeskripsi Produk:\n{{ $json.text }}\n\nKetentuan:\n- Gunakan bahasa profesional dan edukatif.\n- Jelaskan manfaat produk secara objektif.\n- Jangan membuat klaim medis yang tidak terbukti.\n- Panjang 20–50 kata.\n- Akhiri dengan CTA singkat.\n- Output HARUS berupa JSON valid.\n\nFormat output WAJIB:\n{\n\"medis\": \"isi copywriting di sini\"\n}",
+        "hasOutputParser": true,
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        -48,
+        368
+      ],
+      "id": "191a3b50-1fd4-41f8-a252-b6dec22929fd",
+      "name": "AI Pakar Medis"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Balas hanya dengan JSON mentah. Karakter pertama harus { dan karakter terakhir harus }.\n\nBuat copywriting promosi produk dengan gaya MOTIVATOR agar orang tertarik terhadap produk kita.\n\nNama Produk:\n{{ $('On form submission').item.json['Nama Produk'] }}\n\nDeskripsi Produk:\n{{ $json.text }}\n\nAturan:\n- Bahasa Indonesia, semangat, positif, dan meyakinkan.\n- Fokus pada manfaat produk .\n- Panjang 20–50 kata.\n- Akhiri dengan CTA singkat.\n\nFormat:\n{\n  \"motivator\": \"isi copywriting di sini\"\n}",
+        "hasOutputParser": true,
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        -48,
+        -80
+      ],
+      "id": "f56381b1-9d90-4661-be42-23642166c863",
+      "name": "AI Motivator"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Buat copywriting promosi produk dengan gaya SALESMAN agar orang tertarik terhadap produk kita.\n\nNama Produk:\n{{ $('On form submission').item.json['Nama Produk'] }}\n\nDeskripsi Produk:\n{{ $json.text }}\n\nKetentuan:\n- Fokus pada penjualan dan manfaat utama.\n- Gunakan bahasa persuasif.\n- Berikan alasan membeli sekarang.\n- Panjang 20–50 kata.\n- Akhiri dengan CTA kuat.\n- Output HARUS berupa JSON valid.\n\nFormat output WAJIB:\n{\n\"sales\": \"isi copywriting di sini\"\n}",
+        "hasOutputParser": true,
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        -48,
+        144
+      ],
+      "id": "623c9556-6a17-4b6d-8617-bb923681abc4",
+      "name": "AI Salesman"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Buat copywriting promosi produk dengan gaya KOMEDIAN agar orang tertarik terhadap produk kita.\n\nNama Produk:\n{{ $('On form submission').item.json['Nama Produk'] }}\n\nDeskripsi Produk:\n{{ $json.text }}\n\nKetentuan:\n- Gunakan humor ringan dan menghibur.\n- Tetap fokus pada manfaat produk.\n- Panjang 20–50 kata.\n- Output HARUS berupa JSON valid.\n\nFormat output WAJIB:\n{\n\"komedian\": \"isi copywriting di sini\"\n}",
+        "hasOutputParser": true,
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        -48,
+        -272
+      ],
+      "id": "37904290-9984-4a33-a0c8-c355faf55d59",
+      "name": "AI Komedian"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-flash-lite-latest",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -400,
+        432
+      ],
+      "id": "b16fa42c-aa2a-4f55-b5e3-a3cc97bcac7b",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "dvyFEBtQ3TCKm1cz",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "numberInputs": 4,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        496,
+        32
+      ],
+      "id": "4f093519-7ee5-4c1f-9154-78c51adc7865",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"komedian\": {\n      \"type\": \"string\"\n    },\n    \"motivator\": {\n      \"type\": \"string\"\n    },\n    \"sales\": {\n      \"type\": \"string\"\n    },\n    \"medis\": {\n      \"type\": \"string\"\n    }\n  },\n  \"additionalProperties\": false\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        448,
+        448
+      ],
+      "id": "080afb37-0a7f-4161-be03-525b6b50e1ce",
+      "name": "Structured Output Parser3"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Mengonversi ke Base64",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mengonversi ke Base64": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "AI Komedian",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "AI Pakar Medis",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "AI Motivator",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "AI Salesman",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Pakar Medis": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "AI Motivator": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "AI Salesman": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "AI Komedian": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Komedian",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "AI Pakar Medis",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "AI Motivator",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "AI Salesman",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        []
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser3": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Komedian",
+            "type": "ai_outputParser",
+            "index": 0
+          },
+          {
+            "node": "AI Motivator",
+            "type": "ai_outputParser",
+            "index": 0
+          },
+          {
+            "node": "AI Salesman",
+            "type": "ai_outputParser",
+            "index": 0
+          },
+          {
+            "node": "AI Pakar Medis",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "5aa25a82-e98a-42fe-a3ca-02ff13b63354",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8acbc7947428b8bad5fd3738fbb6e7471f25d9e01e26bad4dc791f1f94dcdc0c"
+  },
+  "id": "BXKtprv2TDKKqDIp",
+  "tags": []
+}
